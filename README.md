@@ -8,7 +8,7 @@ Welcome! Thank you so much for your interest in Kanopi Studios :herb:. This proj
 3. The timestamp of your last commit will be the cutoff time used. Any commits after the three-hour mark will not be considered as part of your submission.
 4. Please use WordPress coding and documentation standards as defined in PHPCS.
 5. All files must be managed in a plugin.
-6. Your solution may not rely on a third-party plugin.
+6. Your solution may not rely on any third-party plugins other than those installed via composer for this project.
 7. Your work will be tested on a default WordPress installation running the theme in your fork of this repository, and using the standard [Theme Unit Test](https://codex.wordpress.org/Theme_Unit_Test) content.
 
 ## The code requirements
@@ -21,11 +21,13 @@ Welcome! Thank you so much for your interest in Kanopi Studios :herb:. This proj
 ## Getting started
 1. Download the GitHub repository.
 2. Set up a local development site. We use [Docksal](https://docksal.io/) here at Kanopi. [Local](https://localwp.com/) and [Lando](https://lando.dev/) are also great. Do whatever makes you fastest!
-3. Install the site's required plugins using the Composer file in the root of the project.
-4. Set up your theme for development. The supplied theme is based on the [Sage Starter Theme](https://roots.io/sage/) and is equipped with the [Foundation framework](https://get.foundation/) (since this is a three-hour test and all).
+3. Install the site's required plugins (and the theme you'll be using) with the Composer file in the root of the project.
+4. Set up your theme for development. The supplied theme (`wp-vanilla`) uses `npm` and `gulp`. Run `npm` install. Run `gulp:serve` to run `browsersync` and `watch`, or simply `gulp` to start watching for changes.
 
 
 ## The task
+
+### Build
 1. Register an Events custom post type.
 2. Remove comments from the Events custom post type.
 3. Add a Events Type custom Taxonomy.
@@ -35,16 +37,23 @@ Welcome! Thank you so much for your interest in Kanopi Studios :herb:. This proj
     2. Add a end date
     3. Add a subtitle
     4. Add a teaser image field (yes, there's always `the_thumbnail`... but this is a test!)
-6. Add the above fields to the template file for viewing individual Events.
-7. Build a loop that will list only upcoming events. The loop should contain the following fields:
-    * Teaser image
-    * Start date
-    * End date
-    * Title
-    * Subtitle
-    * Excerpt
-8. Build and theme the upcoming events loop to match the provided design.
-9. Because the upcoming events loop contains a meta query, cache it with a transient. Your transient should get cleared when an event is published, and when an event is updated.
+
+### Theme
+1. Add the above fields to the template file for viewing individual Events.
+2. Build a loop that will list only upcoming events. The loop should contain the following fields:
+  * Teaser image
+  * Start date
+  * End date
+  * Title
+  * Subtitle
+  * Excerpt
+3. Theme the upcoming events loop to match the provided design. You do not need to paginate this loop; it should just show all upcoming events in one page.
+4. Because the upcoming events loop contains a meta query, cache it with a transient. Your transient should get cleared when an event is published, and when an event is updated.
+
+### Enhance
+1. Add some JavaScript filters to to the Events archive page that lets you filter events by the following criteria:
+  * Start date
+  * Taxonomy terms
 
 ## Ideas for extra fun stuff :tada:
 If you have extra time and want to show off, here are some ideas!

@@ -16,14 +16,14 @@
     "require": {
         "php": ">=7.2",
         "composer/installers": "dev-trunk",
-        "wpackagist-plugin/advanced-custom-fields": "dev-trunk",
+        "kanopi/wp-vanilla": "dev-master",
+        "wpackagist-plugin/advanced-custom-fields": "^5.8",
         "wpackagist-plugin/async-javascript": "dev-trunk",
         "wpackagist-plugin/autoptimize": "dev-trunk",
         "wpackagist-plugin/redirection": "dev-trunk",
         "wpackagist-plugin/shortpixel-image-optimiser": "dev-trunk",
-        "wpackagist-plugin/wp-smushit": "dev-trunk",
         "wpackagist-plugin/wp-cfm": "dev-trunk",
-        "kanopi/wp-vanilla-theme": "dev-master"
+        "wpackagist-plugin/wp-smushit": "dev-trunk"
     },
     "require-dev": {
         "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
