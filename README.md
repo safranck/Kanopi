@@ -47,7 +47,8 @@ Welcome! Thank you so much for your interest in Kanopi Studios :herb:. This proj
   * Title
   * Subtitle
   * Excerpt
-3. [Theme the upcoming events loop to match the provided design](https://www.sketch.com/s/4f740b69-695e-4bf2-a6f7-4a8d52e76b69). Use the inspector in Sketch Cloud to get the details of the layout. Only the logo is an exportable asset; the images can be replaced with anything you like. Note that this design is not exact and doesn't require pixel precision; however you should adhere to the grid and make it as close as possible.
+3. [Theme the upcoming events loop to match the provided design](https://www.sketch.com/s/4f740b69-695e-4bf2-a6f7-4a8d52e76b69). The font used in this design is [Nunito Sans](https://fonts.google.com/specimen/Nunito+Sans). Use the inspector in Sketch Cloud to get the details of the layout.
+3. Only the logo is an exportable asset. The event images are all FPO and can be replaced with anything you like. Note that this design is not exact and doesn't require pixel precision; however you should adhere to the grid and make it as close as possible.
 3. You do not need to paginate this loop; it should just show all upcoming events in one page.
 4. Because the upcoming events loop contains a meta query, cache it with a transient. Your transient should get cleared when an event is published, and when an event is updated.
 
