@@ -7,8 +7,7 @@ Welcome! Thank you so much for your interest in Kanopi Studios :herb:. This proj
 2. Please do your work in a **fork** of this repository.
 3. The timestamp of your last commit will be the cutoff time used. Any commits after the three-hour mark will not be considered as part of your submission.
 4. Please use WordPress coding and documentation standards as defined in PHPCS.
-5. All files must be managed in a plugin.
-6. Your solution may not rely on any third-party plugins other than those installed via composer for this project.
+6. Your solution may not rely on any third-party WordPress plugins other than those installed via composer for this project.
 7. Your work will be tested on a default WordPress installation running the theme in your fork of this repository, and using the standard [Theme Unit Test](https://codex.wordpress.org/Theme_Unit_Test) content.
 
 ## The code requirements
@@ -39,7 +38,7 @@ Welcome! Thank you so much for your interest in Kanopi Studios :herb:. This proj
     4. Add a teaser image field (yes, there's always `the_thumbnail`... but this is a test!)
 
 ### Theme
-1. Add the above fields to the template file for viewing individual Events.
+1. Add the above fields to the template file for viewing individual Events. **NOTE:** You do not need to theme this page unless you have time left over (see below).
 2. Build a loop that will list only upcoming events. The loop should contain the following fields:
   * Teaser image
   * Start date
@@ -50,7 +49,6 @@ Welcome! Thank you so much for your interest in Kanopi Studios :herb:. This proj
 3. [Theme the upcoming events loop to match the provided design](https://www.sketch.com/s/4f740b69-695e-4bf2-a6f7-4a8d52e76b69). The font used in this design is [Nunito Sans](https://fonts.google.com/specimen/Nunito+Sans). Use the inspector in Sketch Cloud to get the details of the layout.
 3. Only the logo is an exportable asset. The event images are all FPO and can be replaced with anything you like. Note that this design is not exact and doesn't require pixel precision; however you should adhere to the grid and make it as close as possible.
 3. You do not need to paginate this loop; it should just show all upcoming events in one page.
-4. Because the upcoming events loop contains a meta query, cache it with a transient. Your transient should get cleared when an event is published, and when an event is updated.
 
 ### Enhance
 1. Add some JavaScript filters to to the Events archive page that lets you filter events by the following criteria:
@@ -59,6 +57,8 @@ Welcome! Thank you so much for your interest in Kanopi Studios :herb:. This proj
 
 ## Ideas for extra fun stuff :tada:
 If you have extra time and want to show off, here are some ideas!
+* Because the upcoming events loop contains a meta query, cache it with a transient. Your transient should get cleared when an event is published, and when an event is updated.
+* Theme out the single event page using the provided design.
 * Build a past events loop that contains the same fields as above, add a transient for this loop as well.
 * Create an upcoming events Gutenberg block.
 * Add some snazzy animations.
