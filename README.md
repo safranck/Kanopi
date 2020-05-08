@@ -9,19 +9,20 @@ Welcome! Thank you so much for your interest in Kanopi Studios :herb:. This proj
 4. Please use WordPress coding and documentation standards as defined in PHPCS.
 5. All files must be managed in a plugin.
 6. Your solution may not rely on a third-party plugin.
-7. Your work will be tested on a default WordPress installation running Twentynineteen and using the standard Theme Unit Test content.
+7. Your work will be tested on a default WordPress installation running the theme in your fork of this repository, and using the standard [Theme Unit Test](https://codex.wordpress.org/Theme_Unit_Test) content.
 
 ## The code requirements
 1. Meet WordPress coding standards (WPCS).
 2. Meet WCAG 2.1 AA accessibility standards.
 3. Take performance into consideration.
-4. Be responsive, with a theme that works on mobile and desktop.
+4. The theme must be responsive (not adaptive).
+5. Your styling must take a mobile-first approach.
 
 ## Getting started
 1. Download the GitHub repository.
-2. Set up a local development site. We have supplied a very simple Docksal container in the repository. If you use Docksal, you can simply run `fin init` to get things started; it will install all the plugins and such for you. If you prefer to do local development another way, go to step 3.
-3. Install your plugins. If you are not using Docksal, use the composer file in the root of the project to install your plugins.
-4. Set up your theme for development. The supplied theme uses `npm` and `gulp`. Run `npm install`. Run `gulp:serve` to run `browsersync` and `watch`, or simply `gulp` to start watching for changes.
+2. Set up a local development site. We use [Docksal](https://docksal.io/) here at Kanopi. [Local](https://localwp.com/) and [Lando](https://lando.dev/) are also great. Do whatever makes you fastest!
+3. Install the site's required plugins using the Composer file in the root of the project.
+4. Set up your theme for development. The supplied theme is based on the [Sage Starter Theme](https://roots.io/sage/) and is equipped with the [Foundation framework](https://get.foundation/) (since this is a three-hour test and all).
 
 
 ## The task
