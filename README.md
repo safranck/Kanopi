@@ -3,7 +3,7 @@ Welcome! Thank you so much for your interest in Kanopi Studios :herb:. This proj
 
 
 ## The rules
-1. Please spend no more than **three hours** on this project. It's okay if you do not finish in that time; just make sure you provide a clear outline of what you have done, what is still to do, and any known issues.
+1. Please spend no more than **three hours** on this project. **It's okay if you do not finish in that time.** Just make sure you provide a clear outline of what you have done, what is still to do, and any known issues.
 2. Please do your work in a **fork** of this repository.
 3. The timestamp of your last commit will be the cutoff time used. Any commits after the three-hour mark will not be considered as part of your submission.
 4. Please use WordPress coding and documentation standards as defined in PHPCS.
@@ -47,12 +47,13 @@ Welcome! Thank you so much for your interest in Kanopi Studios :herb:. This proj
   * Title
   * Subtitle
   * Excerpt
-3. Theme the upcoming events loop to match the provided design. You do not need to paginate this loop; it should just show all upcoming events in one page.
+3. [Theme the upcoming events loop to match the provided design](https://www.sketch.com/s/4f740b69-695e-4bf2-a6f7-4a8d52e76b69). Use the inspector in Sketch Cloud to get the details of the layout. Only the logo is an exportable asset; the images can be replaced with anything you like. Note that this design is not exact and doesn't require pixel precision; however you should adhere to the grid and make it as close as possible.
+3. You do not need to paginate this loop; it should just show all upcoming events in one page.
 4. Because the upcoming events loop contains a meta query, cache it with a transient. Your transient should get cleared when an event is published, and when an event is updated.
 
 ### Enhance
 1. Add some JavaScript filters to to the Events archive page that lets you filter events by the following criteria:
-  * Start date
+  * Start date (sort by closest date)
   * Taxonomy terms
 
 ## Ideas for extra fun stuff :tada:
