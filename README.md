@@ -19,7 +19,7 @@ Welcome! Thank you so much for your interest in Kanopi Studios :herb:. This proj
 
 ## Getting started
 1. Download the GitHub repository.
-2. Set up a local development site. We use [Docksal](https://docksal.io/) here at Kanopi. [Local](https://localwp.com/) and [Lando](https://lando.dev/) are also great. Do whatever makes you fastest!
+2. Set up a local development site. We use [Docksal](https://github.com/docksal/boilerplate-wordpress) here at Kanopi. [Local](https://localwp.com/) and [Lando](https://lando.dev/) are also great. Do whatever makes you fastest!
 3. Install the site's required plugins (and the theme you'll be using) with the Composer file in the root of the project.
 4. Set up your theme for development. The supplied theme (`wp-vanilla`) uses `npm` and `gulp`. Run `npm` install. Run `gulp:serve` to run `browsersync` and `watch`, or simply `gulp` to start watching for changes.
 
