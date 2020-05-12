@@ -11,7 +11,7 @@ Welcome! Thank you so much for your interest in Kanopi Studios :herb:. This proj
 7. Your work will be tested on a default WordPress installation running the theme in your fork of this repository, and using the standard [Theme Unit Test](https://codex.wordpress.org/Theme_Unit_Test) content.
 
 ## The code requirements
-1. Meet WordPress coding standards (WPCS).
+1. Meet WordPress coding standards ([WPCS](https://github.com/WordPress/WordPress-Coding-Standards)).
 2. Meet WCAG 2.1 AA accessibility standards.
 3. Take performance into consideration.
 4. The theme must be responsive (not adaptive).
