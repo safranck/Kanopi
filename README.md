@@ -7,12 +7,12 @@ Welcome! Thank you so much for your interest in Kanopi Studios :herb:. This proj
 2. Please do your work in a **fork** of this repository.
 3. The timestamp of your last commit will be the cutoff time used. Any commits after the three-hour mark will not be considered as part of your submission.
 4. Please use WordPress coding and documentation standards as defined in PHPCS.
-6. Your solution may not rely on any third-party WordPress plugins other than those installed via composer for this project.
+6. Your solution may not rely on any third-party WordPress plugins other than those installed via Composer for this project.
 7. Your work will be tested on a default WordPress installation running the theme in your fork of this repository, and using the standard [Theme Unit Test](https://codex.wordpress.org/Theme_Unit_Test) content.
 
 ## The code requirements
 1. Meet WordPress coding standards ([WPCS](https://github.com/WordPress/WordPress-Coding-Standards)).
-2. Meet WCAG 2.1 AA accessibility standards.
+2. Meet (or exceed) [WCAG 2.1 AA accessibility guidelines](https://www.w3.org/WAI/WCAG21/quickref/?currentsidebar=%23col_customize&levels=aaa).
 3. Take performance into consideration.
 4. The theme must be responsive (not adaptive).
 5. Your styling must take a mobile-first approach.
@@ -47,7 +47,7 @@ Welcome! Thank you so much for your interest in Kanopi Studios :herb:. This proj
   * Subtitle
   * Excerpt
 3. [Theme the upcoming events loop to match the provided design](https://www.sketch.com/s/4f740b69-695e-4bf2-a6f7-4a8d52e76b69). The font used in this design is [Nunito Sans](https://fonts.google.com/specimen/Nunito+Sans). Use the inspector in Sketch Cloud to get the details of the layout.
-3. Only the logo is an exportable asset. The event images are all FPO and can be replaced with anything you like. Note that this design is not exact and doesn't require pixel precision; however you should adhere to the grid and make it as close as possible.
+3. Only the logo is an exportable asset. The event images are all [FPO](https://en.wikipedia.org/wiki/For_position_only) and can be replaced with anything you like. Note that this design is not exact and doesn't require pixel precision; however you should adhere to the grid and make it as close as possible.
 3. You do not need to paginate this loop; it should just show all upcoming events in one page.
 
 ### Enhance
