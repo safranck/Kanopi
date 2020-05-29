@@ -8,7 +8,7 @@ Welcome! Thank you so much for your interest in Kanopi Studios :herb:. This proj
 3. The timestamp of your last commit will be the cutoff time used. Any commits after the three-hour mark will not be considered as part of your submission.
 4. Please use WordPress coding and documentation standards as defined in PHPCS.
 6. Your solution may not rely on any third-party WordPress plugins other than those installed via Composer for this project.
-7. Your work will be tested on a default WordPress installation running the theme in your fork of this repository, and using the standard [Theme Unit Test](https://codex.wordpress.org/Theme_Unit_Test) content.
+7. Your work will be tested on a default WordPress installation running the theme in your fork of this repository.
 
 ## The code requirements
 1. Meet WordPress coding standards ([WPCS](https://github.com/WordPress/WordPress-Coding-Standards)).
