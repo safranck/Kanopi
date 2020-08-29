@@ -21,26 +21,37 @@ Welcome! Thank you so much for your interest in Kanopi Studios :herb:. This proj
 1. Download the GitHub repository.
 2. Set up a local development site. We use [Docksal](https://github.com/docksal/boilerplate-wordpress) here at Kanopi. [Local](https://localwp.com/) and [Lando](https://lando.dev/) are also great. Do whatever makes you fastest!
 3. Install the site's required plugins (and the theme you'll be using) with the Composer file in the root of the project.
-4. Set up your theme for development. The supplied theme (`wp-vanilla`) uses `npm` and `gulp`. Run `npm` install. Run `gulp:serve` to run `browsersync` and `watch`, or simply `gulp` to start watching for changes.
+4. Set up your theme for development. The supplied theme (`wp-vanilla`) uses `npm` and `gulp`.
 
+### The theme uses:
+* Node v10.12.0
+* Gulp 3
+
+### Running tasks
+The site should Glob your JS and and SCSS together.
+Right now, if you add a new SCSS partial or an new JS file you may need to stop and restart Gulp or the NPM script. We are in the process of changing this when we upgrade to Gulp 4.
+
+1. Run `npm
+1. Use `npm run watch` to watch for changes. Alternatively run `gulp watch`.
+1. Use `npm run serve` to launch browserSync. Alternatively run `gulp serve`.
+1. Use `npm run build` to clean and compile for PROD. Alternatively run `gulp build`.
+
+### Notes:
+* NPM does not install the gulp-cli. This theme assumes the package is installed globally.
+* `package.json` and `package-lock.json` were built within a docker container.
+* To use browser sync be sure to update the localUrl found here `gulp/config/browserSync.js`.
 
 ## The task
 
-### Build
-1. Register an Events custom post type.
-2. Remove comments from the Events custom post type.
-3. Add a Events Type custom Taxonomy.
-4. Add the Events Type taxonomy to the Events custom post type.
-5. Using Advanced Custom Fields, add the following fields to Events:
-    1. Add a start date
-    2. Add a end date
-    3. Add a subtitle
-    4. Add a teaser image field (yes, there's always `the_thumbnail`... but this is a test!)
+### Setup
+1. Activate ACF. This should automatically load the ACF field group for events.
+1. Add some terms to the Events Type taxonomy.
+1. Generate some dummy events.
 
 ### Theme
-1. Add the above fields to the template file for viewing individual Events. **NOTE:** You do not need to theme this page unless you have time left over (see below).
+1. Add the ACF fields for the Events CPT to the template file for viewing individual Events. **NOTE:** You do not need to theme this page unless you have time left over (see below).
 2. Build a loop that will list only upcoming events. The loop should contain the following fields:
-  * Teaser image
+  * Feature image
   * Start date
   * End date
   * Title
@@ -52,6 +63,7 @@ Welcome! Thank you so much for your interest in Kanopi Studios :herb:. This proj
 
 ### Enhance
 1. Add some JavaScript filters to to the Events archive page that lets you filter events by the following criteria:
+  _We realize this can easily be done with a plugin such as FacetWP but we want to see you skills.
   * Start date (sort by closest date)
   * Taxonomy terms
 
