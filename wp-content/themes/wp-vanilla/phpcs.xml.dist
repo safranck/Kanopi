@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<ruleset name="kanopi">
+	<description>A custom set of rules to check for a WPized WordPress project</description>
+
+	<!-- Exclusions. -->
+	<exclude-pattern>/web/wp/wp-admin/*</exclude-pattern>
+	<exclude-pattern>/web/wp/wp-includes/*</exclude-pattern>
+	<exclude-pattern>/web/wp/wp-*.php</exclude-pattern>
+	<exclude-pattern>/web/wp/index.php</exclude-pattern>
+	<exclude-pattern>/web/wp/xmlrpc.php</exclude-pattern>
+	<exclude-pattern>/web/wp-content/plugins/*</exclude-pattern>
+    <exclude-pattern>/web/wp-content/themes/wp-vanilla-theme/dist/*</exclude-pattern>
+    <exclude-pattern>/web/wp-content/themes/wp-vanilla-theme/fonts/*</exclude-pattern>
+    <exclude-pattern>/web/wp-content/themes/wp-vanilla-theme/gulp/*</exclude-pattern>
+    <exclude-pattern>/web/wp-content/themes/wp-vanilla-theme/libraries/*</exclude-pattern>
+    <exclude-pattern>/web/wp-content/themes/wp-vanilla-theme/node_modules/*</exclude-pattern>
+    <exclude-pattern>/web/wp-content/themes/wp-vanilla-theme/sassdoc/*</exclude-pattern>
+
+	<!-- Exclude the Composer Vendor directory. -->
+	<exclude-pattern>/vendor/*</exclude-pattern>
+
+	<!-- Exclude the Node Modules directory. -->
+	<exclude-pattern>/node_modules/*</exclude-pattern>
+
+	<!-- Exclude minified Javascript files. -->
+	<exclude-pattern>*.min.js</exclude-pattern>
+
+	<!-- Include the WordPress-Extra standard. -->
+	<config name="WordPress-Extra" value="~/.composer/vendor/wp-coding-standards/wpcs/" />
+    <config name="testVersion" value="5.6-"/>
+	<rule ref="WordPress-Extra">
+        <config name="colors" value="1" />
+        <!-- Pass some flags to PHPCS:
+             p flag: Show progress of the run.
+             s flag: Show sniff codes in all reports.
+             v flag: Print verbose output.
+        -->
+        <arg value="psv" />
+		<!--
+		We may want a middle ground though. The best way to do this is add the
+		entire ruleset, then rule by rule, remove ones that don't suit a project.
+		We can do this by running `phpcs` with the '-s' flag, which allows us to
+		see the names of the sniffs reporting errors.
+		Once we know the sniff names, we can opt to exclude sniffs which don't
+		suit our project like so.
+
+		The below two examples just show how you can exclude rules.
+		They are not intended as advice about which sniffs to exclude.
+		-->
+        <exclude name="WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound" />
+        <exclude name="WordPress.CodeAnalysis.AssignmentInCondition.Found" />
+        <exclude name="WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound" />
+        <exclude name="Generic.CodeAnalysis.UnusedFunctionParameter.FoundAfterLastUsed" />
+        <exclude name="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket" />
+        <exclude name="PEAR.Functions.FunctionCallSignature.MultipleArguments" />
+        <exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine" />
+
+		<file>/web/wp-content/themes/wp-vanilla-theme/</file>
+	</rule>
+
+	<!-- Let's also check that everything is properly documented. -->
+	<rule ref="WordPress-Docs"/>
+
+	<!-- Add in some extra rules from other standards. -->
+	<rule ref="Generic.CodeAnalysis.UnusedFunctionParameter"/>
+	<rule ref="Generic.Commenting.Todo"/>
+
+	<config name="minimum_supported_wp_version" value="4.6"/>
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array" value="kanopi"/>
+		</properties>
+	</rule>
+
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array" value="kanopi"/>
+		</properties>
+	</rule>
+
+</ruleset>
