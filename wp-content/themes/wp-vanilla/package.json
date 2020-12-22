@@ -63,7 +63,7 @@
     "jshint-stylish": "^2.2.1",
     "ngrok": "^3.2.1",
     "node-normalize-scss": "^3.0.0",
-    "node-notifier": "^5.4.0",
+    "node-notifier": "^8.0.1",
     "node-sass": "^4.13.1",
     "postcss-css-variables": "^0.13.0",
     "postcss-custom-properties": "^9.0.1",
